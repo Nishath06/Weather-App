@@ -1,0 +1,151 @@
+.popular-cities {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  margin: 40px 0;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.5s ease-out 0.4s both;
+}
+
+.popular-cities h2 {
+  color: #333;
+  margin-bottom: 25px;
+  font-size: 28px;
+}
+
+.loading-cities {
+  text-align: center;
+  padding: 40px;
+  color: #999;
+}
+
+.cities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.city-card {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 20px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: 2px solid transparent;
+}
+
+.city-card:hover {
+  border-color: #667eea;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.city-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.city-header h3 {
+  font-size: 20px;
+  color: #333;
+}
+
+.city-card:hover .city-header h3 {
+  color: white;
+}
+
+.country-code {
+  background: #667eea;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.city-card:hover .country-code {
+  background: white;
+  color: #667eea;
+}
+
+.city-weather {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15px 0;
+}
+
+.city-icon {
+  width: 60px;
+  height: 60px;
+}
+
+.city-temp {
+  font-size: 32px;
+  font-weight: bold;
+  color: #667eea;
+}
+
+.city-card:hover .city-temp {
+  color: white;
+}
+
+.city-description {
+  text-align: center;
+  text-transform: capitalize;
+  color: #666;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.city-card:hover .city-description {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.city-details {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 15px;
+  border-top: 1px solid #ddd;
+  font-size: 14px;
+  color: #666;
+}
+
+.city-card:hover .city-details {
+  border-top-color: rgba(255, 255, 255, 0.3);
+  color: white;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .cities-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+
+  .city-card {
+    padding: 15px;
+  }
+
+  .city-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .city-temp {
+    font-size: 24px;
+  }
+}

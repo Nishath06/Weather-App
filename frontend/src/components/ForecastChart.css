@@ -1,0 +1,130 @@
+.forecast-section {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  margin: 20px 0;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.5s ease-out 0.2s both;
+}
+
+.forecast-section h2 {
+  color: #333;
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
+.daily-forecast {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.day-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.day-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+}
+
+.day-date {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.day-icon {
+  width: 80px;
+  height: 80px;
+  margin: 10px 0;
+}
+
+.day-description {
+  font-size: 14px;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+  opacity: 0.9;
+}
+
+.day-temp {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.temp-max {
+  color: white;
+}
+
+.temp-separator {
+  margin: 0 5px;
+  opacity: 0.6;
+}
+
+.temp-min {
+  opacity: 0.7;
+}
+
+.day-details {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 14px;
+}
+
+.chart-container {
+  margin: 30px 0;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 15px;
+}
+
+.chart-container h3 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .daily-forecast {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .day-card {
+    padding: 15px;
+  }
+
+  .day-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .chart-container {
+    padding: 15px;
+  }
+
+  .chart-container h3 {
+    font-size: 18px;
+  }
+}
