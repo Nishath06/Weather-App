@@ -6,7 +6,8 @@ import SearchBar from './components/SearchBar';
 import PopularCities from './components/PopularCities';
 import axios from 'axios';
 
-const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5001';
+// Remove trailing slash to prevent double slashes in API calls
+const API_URL = (process.env.REACT_APP_API_URL || 'http://localhost:5001').replace(/\/$/, '');
 
 function App() {
   const [currentWeather, setCurrentWeather] = useState(null);

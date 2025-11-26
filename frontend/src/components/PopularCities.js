@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './PopularCities.css';
 
-const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5001';
+// Remove trailing slash to prevent double slashes in API calls
+const API_URL = (process.env.REACT_APP_API_URL || 'http://localhost:5001').replace(/\/$/, '');
 
 function PopularCities({ onCitySelect }) {
   const [cities, setCities] = useState([]);
