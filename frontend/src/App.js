@@ -7,6 +7,7 @@ import PopularCities from './components/PopularCities';
 import axios from 'axios';
 
 // Remove trailing slash to prevent double slashes in API calls
+// Updated: 2025-11-26
 const API_URL = (process.env.REACT_APP_API_URL || 'http://localhost:5001').replace(/\/$/, '');
 
 function App() {
