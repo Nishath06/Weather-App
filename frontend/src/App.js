@@ -6,7 +6,7 @@ import SearchBar from './components/SearchBar';
 import PopularCities from './components/PopularCities';
 import axios from 'axios';
 
-const API_URL = (process.env.REACT_APP_API_URL || 'https://vercel.com/nishath-j-ps-projects/weather-app-be/BsKbQZrJq21AE4rYWJtkrTJMSMZf').replace(/\/$/, '');
+const API_URL = ('https://vercel.com/nishath-j-ps-projects/weather-app-be/BsKbQZrJq21AE4rYWJtkrTJMSMZf').replace(/\/$/, '');
 
 function App() {
   const [currentWeather, setCurrentWeather] = useState(null);
