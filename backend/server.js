@@ -9,8 +9,10 @@ const PORT = process.env.PORT || 5001;
 
 // Middleware
 app.use(cors({
-  origin:'https://weather-app-frontend-beryl.vercel.app/',
-  credentials: true
+  origin: process.env.FRONTEND_URL || '*',
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
 }));
 app.use(express.json());
 
